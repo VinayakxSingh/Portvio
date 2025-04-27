@@ -131,13 +131,6 @@ const Dashboard = () => {
     fetchUserData();
   }, [location, navigate]);
 
-  const handleLogout = () => {
-    localStorage.removeItem("userId");
-    localStorage.removeItem("userName");
-    localStorage.removeItem("userEmail");
-    navigate("/login");
-  };
-
   const totalProfitLoss = totalCurrentValue - totalInvestment;
   const profitLossPercentage = totalInvestment > 0 
     ? ((totalProfitLoss / totalInvestment) * 100).toFixed(2)
@@ -150,7 +143,6 @@ const Dashboard = () => {
     }).format(amount);
   };
 
-  // -------- new computed values for sorting and filtering --------
   const filteredInvestments = investments.filter(inv => {
     if (!filterType) return true;
     return inv.name.toLowerCase() === filterType.toLowerCase();
@@ -174,16 +166,10 @@ const Dashboard = () => {
       <div className="dashboard-nav">
         <h2>Investment Dashboard</h2>
         <button 
-          className="logout-button"
+          className="add-investment-button"
           onClick={() => navigate("/add-investment", { state: { userId: userData.userId } })}
         >
           Add Investments
-        </button>
-        <button 
-          className="logout-button"
-          onClick={handleLogout}
-        >
-          Logout
         </button>
       </div>
 
@@ -197,8 +183,7 @@ const Dashboard = () => {
             <h2>Your Investments</h2>
 
             {/* ----------- Charts Component Loaded Here ------------ */}
-{/*             <Charts investments={investments} totalInvestment={totalInvestment} /> */}
-{investments.length > 0 && <Charts investments={investments} totalInvestment={totalInvestment} />}
+            <Charts investments={investments} totalInvestment={totalInvestment} />
 
             <div className="filter-sort-controls">
               <div>
