@@ -17,8 +17,8 @@ const Dashboard = () => {
   const [error, setError] = useState("");
   const [totalInvestment, setTotalInvestment] = useState(0);
   const [totalCurrentValue, setTotalCurrentValue] = useState(0);
-  const [sortOrder, setSortOrder] = useState(""); // new state
-  const [filterType, setFilterType] = useState(""); // new state
+  const [sortOrder, setSortOrder] = useState("");
+  const [filterType, setFilterType] = useState("");
 
   const updateCurrentValues = async (investments) => {
     try {
@@ -197,7 +197,8 @@ const Dashboard = () => {
             <h2>Your Investments</h2>
 
             {/* ----------- Charts Component Loaded Here ------------ */}
-            <Charts investments={investments} totalInvestment={totalInvestment} />
+{/*             <Charts investments={investments} totalInvestment={totalInvestment} /> */}
+{investments.length > 0 && <Charts investments={investments} totalInvestment={totalInvestment} />}
 
             <div className="filter-sort-controls">
               <div>
