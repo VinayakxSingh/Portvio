@@ -20,9 +20,12 @@ function Navbar() {
         <a href="#features">Features</a>
         <a href="#about">About</a>
         {isLoggedIn ? (
-          <button className="logout-button" onClick={handleLogout}>
-            Logout
-          </button>
+          <>
+            <Link to="/dashboard">Dashboard</Link>
+            <button className="logout-button" onClick={handleLogout}>
+              Logout
+            </button>
+          </>
         ) : (
           <Link to="/login">Login</Link>
         )}
