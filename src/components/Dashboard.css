@@ -21,7 +21,7 @@
     font-size: 20px;
   }
   
-  .logout-button {
+  .logout-button, .add-investment-button {
     background-color: #e74c3c;
     color: white;
     border: none;
@@ -32,7 +32,7 @@
     transition: background-color 0.2s;
   }
   
-  .logout-button:hover {
+  .logout-button:hover,.add-investment-button:hover {
     background-color: #c0392b;
   }
   
