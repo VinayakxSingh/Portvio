@@ -1,15 +1,34 @@
 .whyus-section {
+  position: relative;
   background: #fff;
   padding: 4.5rem 0 3.2rem 0;
   text-align: center;
+  overflow: hidden;
+  z-index: 1;
 }
+
+.whyus-bg-blob {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  max-width: 900px;
+  height: 400px;
+  pointer-events: none;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
 .whyus-title {
   font-size: 2.05rem;
   color: #232239;
   margin-bottom: 2.2rem;
   font-weight: 800;
   letter-spacing: 1.3px;
+  position: relative;
+  z-index: 2;
 }
+
 .whyus-cards {
   display: flex;
   justify-content: center;
@@ -17,7 +36,10 @@
   max-width: 950px;
   margin: 0 auto;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
 }
+
 .whyus-card {
   background: #f9f8fe;
   width: 212px;
@@ -88,6 +110,7 @@
   color: #222130;
   line-height: 1.48;
 }
+
 @media (max-width: 900px) {
   .whyus-cards {
     flex-direction: column;
@@ -96,4 +119,33 @@
   .whyus-card {
     margin-bottom: 1.6rem;
   }
+}
+
+.reveal-btn {
+  font-family: "Cal Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  font-style: normal;
+  margin-top: 2.5rem;
+  background-color: whitesmoke;
+  color: black;
+  padding: 0.75rem 1.8rem;
+  border: none;
+  border-radius: 12px;
+  cursor: help;
+  box-shadow: 0 6px 18px rgba(163, 133, 237, 0.25);
+  transition: background-color 0.3s, transform 0.25s;
+  position: relative;
+  top: 20px;
+  z-index: 2;
+}
+
+.reveal-btn:hover {
+  background-color: #8d6ee5;
+  transform: translateY(-2px);
+}
+
+.reveal-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(163, 133, 237, 0.4);
 }

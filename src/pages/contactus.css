@@ -1,0 +1,105 @@
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    position: relative;
+  }
+  
+  .contact-bg-shape {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle at 40% 40%, #a18cd1 0%, #fbc2eb 100%);
+    border-radius: 50%;
+    filter: blur(150px);
+    transform: translate(-50%, -50%);
+    animation: floatBlob 10s ease-in-out infinite alternate;
+    z-index: 1;
+  }
+  
+  @keyframes floatBlob {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+      transform: translate(50%, 50%) scale(1.1);
+    }
+  }
+  
+  .contact-form-container {
+    z-index: 2;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 500px;
+    backdrop-filter: blur(10px);
+  }
+  
+  .contact-form-container h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 15px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #4f46e5;
+    outline: none;
+    box-shadow: 0 0 5px rgba(79, 70, 229, 0.2);
+  }
+  
+  .contact-form button {
+    width: 100%;
+    padding: 12px 0;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #3b3ec2;
+    transform: translateY(-2px);
+  }
+  
+  .thank-you-message {
+    text-align: center;
+    color: #4f46e5;
+    font-size: 20px;
+  }
+  
+  .thank-you-message h3 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  .thank-you-message p {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #555;
+  }
+  

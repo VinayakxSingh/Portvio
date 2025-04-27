@@ -167,6 +167,7 @@ const Dashboard = () => {
         <h2>Investment Dashboard</h2>
         <button 
           className="add-investment-button"
+          style={{backgroundColor:"green"}}
           onClick={() => navigate("/add-investment", { state: { userId: userData.userId } })}
         >
           Add Investments

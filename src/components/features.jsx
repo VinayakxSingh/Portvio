@@ -1,6 +1,6 @@
 import "./Features.css";
 import { motion } from "framer-motion";
-// console.log(motion);
+console.log(motion);
 const features = [
   {
     title: "All Assets, One Place",

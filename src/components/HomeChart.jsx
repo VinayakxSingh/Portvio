@@ -1,6 +1,7 @@
 import React from 'react';
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import './HomeChart.css'; // Import your styles
+import { Link } from 'react-router-dom';
 
 const data = [
   { name: 'Jan', value: 4000 },
@@ -29,8 +30,9 @@ const HomeChart = () => {
         </ResponsiveContainer>
       </div>
       <div className="chart-action">
+        <Link to={"/login"}>
         <button className="market-button" style={{alignSelf:"center", textAlign:'center'}}>Wanna see in-depth? Go here</button>
-      </div>
+        </Link></div>
     </div>
   );
 };

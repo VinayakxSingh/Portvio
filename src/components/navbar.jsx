@@ -17,12 +17,12 @@ function Navbar() {
       <div className="navbar__logo">Portvio</div>
       <div className="navbar__links">
         <Link to="/">Home</Link>
-        <a href="#features">Features</a>
-        <a href="#about">About</a>
+        <a href="/features">Features</a>
+        <a href="/about-us">About</a>
         {isLoggedIn ? (
           <>
             <Link to="/dashboard">Dashboard</Link>
-            <button className="logout-button" onClick={handleLogout}>
+            <button className="logout-button" onClick={handleLogout} style={{backgroundColor:"purple"}}>
               Logout
             </button>
           </>
