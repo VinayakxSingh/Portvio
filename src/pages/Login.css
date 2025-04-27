@@ -1,0 +1,146 @@
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(140deg, #faf7ff, #f1edfd);
+  padding: 1rem;
+}
+
+.auth-box {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(163, 133, 237, 0.25);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  border: 1.5px solid #edebf7;
+}
+
+.auth-box h1 {
+  color: #7f4de2;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.auth-box .welcome {
+  text-align: center;
+  color: #5e4c88;
+}
+
+.auth-box input {
+  background: #f7f3ff;
+  color: #2c2c3e;
+  border: 1.6px solid #e4dffc;
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.auth-box input:focus {
+  border-color: #a385ed;
+  background: #f3effe;
+}
+
+.auth-btn {
+  background: linear-gradient(90deg, #a385ed 0%, #7f4de2 100%);
+  color: white;
+  border: none;
+  width: 100% ;
+  border-radius: 10px;
+  padding: 0.75rem 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 1.2rem;
+}
+.signUp-div{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+}
+
+.sign-btn{
+  background: linear-gradient(90deg, #a385ed 0%, #7f4de2 100%);
+  color: white;
+  border: none;
+  width: 50% ;
+  border-radius: 10px;
+  padding: 0.75rem 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.auth-btn:hover {
+  background: linear-gradient(90deg, #7f4de2 0%, #a385ed 100%);
+  box-shadow: 0 6px 20px rgba(127, 77, 226, 0.3);
+}
+
+.extlogins {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.google-btn {
+  background: #db4437;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.google-btn:hover {
+  background: #c1351d;
+}
+
+.google-icon {
+  font-size: 1.2rem;
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.toggle-text {
+  text-align: center;
+  font-size: 1rem;
+  color: #5e4c88;
+  cursor: pointer;
+}
+
+.toggle-text span {
+  color: #7f4de2;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.auth-btn.logout-btn {
+  background: #dc3545;
+  margin-top: 1.5rem;
+}
+
+.auth-btn.logout-btn:hover {
+  background: #c82333;
+}

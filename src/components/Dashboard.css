@@ -1,0 +1,193 @@
+/* Dashboard.css */
+
+.dashboard-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .dashboard-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: lightgray;
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .dashboard-nav h2 {
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  .logout-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+  }
+  
+  .logout-button:hover {
+    background-color: #c0392b;
+  }
+  
+  .dashboard-header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dashboard-header h1 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .dashboard-header p {
+    margin: 5px 0;
+    color: #666;
+  }
+  
+  .dashboard-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .loading {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 18px;
+  }
+  
+  .error-message {
+    color: #e74c3c;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #f8d7da;
+    background-color: #fff5f5;
+    border-radius: 4px;
+  }
+  
+  .investments-section h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  .table-responsive {
+    overflow-x: auto;
+    margin-bottom: 30px;
+  }
+  
+  .investments-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+  
+  .investments-table th {
+    background-color: #f8f9fa;
+    padding: 12px 15px;
+    border-bottom: 2px solid #ddd;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .investments-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    color: #444;
+  }
+  
+  .investments-table tr:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .profit {
+    color: #27ae60;
+    font-weight: 600;
+  }
+  
+  .loss {
+    color: #e74c3c;
+    font-weight: 600;
+  }
+  
+  .summary-section {
+    margin-top: 30px;
+  }
+  
+  .summary-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .summary-card h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .summary-row:last-child {
+    border-bottom: none;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  
+  .no-investments {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    color: #666;
+  }
+  
+  .no-investments h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+  }
+  
+  @media (max-width: 768px) {
+    .investments-table {
+      font-size: 14px;
+    }
+    
+    .investments-table th,
+    .investments-table td {
+      padding: 8px 10px;
+    }
+    
+    .summary-row {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .summary-row span:last-child {
+      margin-top: 5px;
+    }
+  }
+  

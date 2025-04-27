@@ -1,0 +1,99 @@
+.whyus-section {
+  background: #fff;
+  padding: 4.5rem 0 3.2rem 0;
+  text-align: center;
+}
+.whyus-title {
+  font-size: 2.05rem;
+  color: #232239;
+  margin-bottom: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+.whyus-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2.2rem;
+  max-width: 950px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.whyus-card {
+  background: #f9f8fe;
+  width: 212px;
+  height: 264px;
+  perspective: 1100px;
+  border-radius: 22px;
+  box-shadow: 0 4px 28px 0 #a385ed1a, 0 1.5px 9px 0 #ae82e210;
+  cursor: pointer;
+  transition: box-shadow 0.22s;
+  outline: none;
+  border: 1.5px solid #e5e2f7;
+}
+.whyus-card:focus-within,
+.whyus-card:hover {
+  box-shadow: 0 8px 32px 0 #a385ed3b, 0 8px 18px 0 #d0c4ff11;
+}
+.whyus-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.37s cubic-bezier(0.62, 0.04, 0.31, 1.5);
+  transform-style: preserve-3d;
+  border-radius: 22px;
+}
+.whyus-card.flipped .whyus-card-inner {
+  transform: rotateY(180deg);
+}
+.whyus-card-face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 22px;
+}
+.whyus-card-front {
+  background: transparent;
+}
+.whyus-qmark {
+  font-size: 4.6rem;
+  color: #a385ed;
+  font-weight: 900;
+  letter-spacing: 3px;
+  opacity: 0.85;
+  user-select: none;
+}
+.whyus-card-back {
+  background: #fff;
+  color: #232239;
+  justify-content: flex-start;
+  transform: rotateY(180deg);
+  padding: 2.1rem 1rem 1.7rem 1rem;
+  box-shadow: none;
+}
+.whyus-card-back h3 {
+  color: #a385ed;
+  font-size: 1.17rem;
+  margin-bottom: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.whyus-card-back p {
+  font-size: 1.03rem;
+  font-weight: 400;
+  color: #222130;
+  line-height: 1.48;
+}
+@media (max-width: 900px) {
+  .whyus-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .whyus-card {
+    margin-bottom: 1.6rem;
+  }
+}

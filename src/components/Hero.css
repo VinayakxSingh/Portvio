@@ -1,0 +1,77 @@
+.hero-section {
+  background: #fff;
+  padding: 5.2rem 0 4rem 0;
+  color: #20202a;
+}
+
+.hero-content {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.hero-image {
+  flex: 1 1 340px;
+  text-align: center;
+}
+.phone-mockup {
+  width: 300px;
+  max-width: 70vw;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+height: 100%;
+  background: #ece8fa;
+  border-radius: 10px;
+}
+
+.hero-text {
+  flex: 1 1 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.2rem;
+  text-shadow: 9px 2px 100px rgba(0,0,0,0.6);
+}
+.hero-text h1 {
+  font-size: 2.7rem;
+  color: #18181b;
+  line-height: 1.08;
+  font-weight: 900;
+  letter-spacing: 2.5px;
+}
+.hero-text blockquote {
+  margin: 0;
+  color: #333;
+  font-size: 1.16rem;
+  border-left: 4px solid #a385ed;
+  padding-left: 1rem;
+  font-style: italic;
+  background: #faf7ff;
+  border-radius: 6px;
+  font-weight: 400;
+}
+.hero-text blockquote span {
+  display: block;
+  margin-top: 0.7em;
+  color: #a385ed;
+  font-size: 1.09rem;
+  font-style: normal;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .hero-content {
+    flex-direction: column;
+    gap: 2.1rem;
+    padding: 0 1.2rem;
+  }
+  .hero-image {
+    margin-bottom: 1.2rem;
+  }
+  .hero-text h1 {
+    font-size: 2.1rem;
+  }
+}

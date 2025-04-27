@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #18181b;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: #222;
+  font-family: inherit;
+  font-weight: 800;
+  letter-spacing: .01em;
+  margin-bottom: 0.4em;
+}
+button, input, select, textarea {
+  font-family: inherit;
+}
+::selection {
+  background: #a385ed;
+  color: #fff;
+}
+a {
+  color: #a385ed;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  color: #7f4de2;
+  text-decoration: underline;
+}
+strong, b {
+  color: #7f4de2;
+  font-weight: bold;
+}
