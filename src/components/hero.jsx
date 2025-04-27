@@ -5,7 +5,6 @@ function Hero() {
     <section className="hero-section">
       <div className="hero-content">
         <div className="hero-image">
-          {/* Replace this with a real phone mockup with chart later */}
           <img
             src="/phone1.png"
             alt="Portvio App on Phone"

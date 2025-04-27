@@ -1,0 +1,19 @@
+.charts-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 1rem;
+  }
+  
+  .pie-chart-wrapper, .line-chart-wrapper {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+  }
+  
+  .pie-chart-wrapper h3, .line-chart-wrapper h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  

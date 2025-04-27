@@ -5,10 +5,10 @@ import WhyUsCards from "./components/WhyUsCards";
 import Features from "./components/features";
 import Footer from "./components/footer";
 import Login from "./pages/login";
-import Signup from "./pages/signup";  // Fixed import - capitalized the component name
+import Signup from "./pages/signup";
 import HomeChart from "./components/HomeChart";
 import Dashboard from "./components/Dashboard";
-
+import AddInvestment from "./components/AddInvestment";
 function App() {
   return (
     <Router>
@@ -27,7 +27,8 @@ function App() {
         />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/signup" element={<Signup />} />  {/* Added the Signup component as the element */}
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/add-investment" element={<AddInvestment />} />
       </Routes>
       <Footer />
     </Router>

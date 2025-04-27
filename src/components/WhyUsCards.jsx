@@ -53,11 +53,9 @@ function WhyUsCards() {
               animate={{ rotateY: flipped[idx] ? 180 : 0 }}
               transition={{ duration: 0.37, type: "spring", bounce: 0.38 }}
             >
-              {/* Front */}
               <div className="whyus-card-face whyus-card-front">
                 <span className="whyus-qmark">?</span>
               </div>
-              {/* Back */}
               <div className="whyus-card-face whyus-card-back">
                 <h3>{r.title}</h3>
                 <p>{r.content}</p>
