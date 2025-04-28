@@ -11,6 +11,7 @@ import Features from "./pages/features"
 import Dashboard from "./components/Dashboard";
 import AddInvestment from "./components/AddInvestment";
 import ContactUs from "./pages/contact";
+import Compare from './components/Compare';
 function App() {
   return (
     <Router>
