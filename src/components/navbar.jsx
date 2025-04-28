@@ -22,7 +22,7 @@ function Navbar() {
         {isLoggedIn ? (
           <>
             <Link to="/dashboard">Dashboard</Link>
-            <button className="logout-button" onClick={handleLogout}>
+            <button className="logout-button" onClick={handleLogout} style={{backgroundColor:"purple"}}>
               Logout
             </button>
           </>
