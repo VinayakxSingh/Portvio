@@ -174,8 +174,8 @@ const Dashboard = () => {
         </button>
         <button 
             className="compare-button"
-           style={{backgroundColor:"green"}}
-          className="add-investment-button"
+         
+          className="compare-btn"
             onClick={() => navigate("/compare", { state: { userId: userData.userId } })}
           >
             Compare
