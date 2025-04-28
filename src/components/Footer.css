@@ -1,6 +1,6 @@
 .footer {
-  background-color: #f8f9fa;
-  color: #4a5568;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .footer-container {
@@ -25,18 +25,18 @@
 }
 
 .brand-logo {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 700;
-  color: #3182ce;
+  color: #ffffff;
+  letter-spacing: 0.5px;
   margin-bottom: 1rem;
-  letter-spacing: 0.8px;
 }
 
 .brand-tagline {
-  color: #718096;
-  font-size: 1rem;
-  line-height: 1.6;
+  color: #cccccc;
   margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 .social-links {
@@ -51,79 +51,66 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #e2e8f0;
-  color: #4a5568;
+  background-color: #1a1a1a;
   transition: all 0.3s ease;
 }
 
+.social-link img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
 .social-link:hover {
-  background-color: #3182ce;
-  color: #ffffff;
-  transform: translateY(-2px);
+  background-color: #ffffff;
 }
 
-.footer-columns {
-  display: flex;
-  flex-wrap: wrap;
-  flex: 1 0 100%;
-  gap: 2rem;
+.social-link:hover img {
+  filter: brightness(0);
 }
 
-@media (min-width: 992px) {
-  .footer-columns {
-    flex: 0 0 70%;
-    justify-content: flex-end;
-  }
-}
-
-.footer-section {
+.footer-links {
   flex: 1 0 45%;
 }
 
-@media (min-width: 768px) {
-  .footer-section {
-    flex: 1 0 auto;
-    min-width: 160px;
-  }
-}
-
-.footer-section h4 {
-  color: #2d3748;
-  font-size: 1.15rem;
+.footer-links h4 {
+  color: #ffffff;
+  font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 1.25rem;
 }
 
-.footer-section ul {
+.footer-links ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.footer-section ul li {
+.footer-links ul li {
   margin-bottom: 0.75rem;
 }
 
-.footer-section ul li a {
-  color: #718096;
+.footer-links ul li a {
+  color: #cccccc;
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.3s ease;
 }
 
-.footer-section ul li a:hover {
-  color: #3182ce;
+.footer-links ul li a:hover {
+  color: #ffffff;
 }
 
 .footer-bottom {
-  border-top: 1px solid #e2e8f0;
+  border-top: 1px solid #1a1a1a;
   padding: 1.5rem 0;
-  text-align: center;
+  margin-top: 2rem;
 }
 
 .copyright {
+  text-align: center;
   font-size: 0.9rem;
-  color: #a0aec0;
+  color: #777777;
   margin: 0;
 }
 
@@ -132,7 +119,7 @@
     padding: 2rem 1rem;
   }
 
-  .footer-section {
-    margin-bottom: 1.5rem;
+  .footer-links {
+    margin-top: 2rem;
   }
 }
