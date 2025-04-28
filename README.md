@@ -13,7 +13,7 @@ Problem Solved --   The Investment Tracker eliminates the need for manual tracki
 Fullstack
 
 ## Deplolyed App
-App Link: https://investment-tracker-jaa3164e8-kaushals-projects-81d6995c.vercel.app/
+App Link:(https://investment-tracker-one.vercel.app/)
 Database: https://investment-6f46c-default-rtdb.firebaseio.com/users.json
 
 ## Directory Structure
