@@ -1,7 +1,7 @@
 // Footer.jsx
 import React from "react";
 import "./Footer.css";
-import { Twitter, Facebook, Linkedin, Github } from "lucide-react";
+// import { Twitter, Facebook, Linkedin, Github } from "lucide-react";
 
 function Footer() {
   return (
@@ -12,16 +12,16 @@ function Footer() {
           <p className="brand-tagline">Smart investment tracking for informed decisions</p>
           <div className="social-links">
             <a href="#" className="social-link" aria-label="Twitter">
-              <Twitter size={18} />
+{/*               <Twitter size={18} /> */}
             </a>
             <a href="#" className="social-link" aria-label="Facebook">
-              <Facebook size={18} />
+{/*               <Facebook size={18} /> */}
             </a>
             <a href="#" className="social-link" aria-label="LinkedIn">
-              <Linkedin size={18} />
+{/*               <Linkedin size={18} /> */}
             </a>
             <a href="https://github.com/" className="social-link" aria-label="GitHub">
-              <Github size={18} />
+{/*               <Github size={18} /> */}
             </a>
           </div>
         </div>
