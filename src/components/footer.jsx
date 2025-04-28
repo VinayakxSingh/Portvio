@@ -1,19 +1,25 @@
 import React from "react";
 import "./Footer.css";
- import { Link } from 'react-router-dom';
-// Import images
+
 import twitterIcon from "../assets/twitter-x.svg";
 import facebookIcon from "../assets/facebook.svg";
 import linkedinIcon from "../assets/linkedin.svg";
 import githubIcon from "../assets/github.svg";
 
+import { Link } from "react-router-dom"; 
+
 function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
-        <div className="footer-section footer-brand">
-          <div className="brand-logo" style={{ color: "black" }}>Portvio</div>
-          <p className="brand-tagline">Smart investment tracking for informed decisions</p>
+        {/* Brand and Social Links */}
+        <div className="footer-brand">
+          <div className="brand-logo" style={{ color: "black" }}>
+            Portvio
+          </div>
+          <p className="brand-tagline">
+            Smart investment tracking for informed decisions
+          </p>
           <div className="social-links">
             <a href="#" className="social-link" aria-label="Twitter">
               <img src={twitterIcon} alt="Twitter" />
@@ -30,23 +36,25 @@ function Footer() {
           </div>
         </div>
 
-        <div className="footer-columns">
-          <div className="footer-section" style={{ position: "relative", left: "700px" }}>
-            <h4>Company</h4>
-            <ul>
-        
-
-<Link to="/about-us">About Us</Link>
-<Link to="/contactus">Contact</Link>
-
-            </ul>
-          </div>
+        {/* Company Links */}
+        <div className="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li>
+              <Link to="/about-us">About Us</Link>
+            </li>
+            <li>
+              <Link to="/contactus">Contact</Link>
+            </li>
+          </ul>
         </div>
       </div>
-      
+
       <div className="footer-bottom">
         <div className="footer-container">
-          <p className="copyright">© {new Date().getFullYear()} Portvio. All rights reserved.</p>
+          <p className="copyright">
+            © {new Date().getFullYear()} Portvio. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
