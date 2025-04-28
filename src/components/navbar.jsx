@@ -17,8 +17,8 @@ function Navbar() {
       <div className="navbar__logo">Portvio</div>
       <div className="navbar__links">
         <Link to="/">Home</Link>
-        <a href="/features">Features</a>
-        <a href="/about-us">About</a>
+        <Link to="/features">Features</Link>
+        <Link to="/about-us">About</Link>
         {isLoggedIn ? (
           <>
             <Link to="/dashboard">Dashboard</Link>
