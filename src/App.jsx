@@ -35,6 +35,7 @@ function App() {
         <Route path="/contactus" element={<ContactUs/>}/>
         <Route path="/about-us" element={<About/>}/>
         <Route path="/features" element={<Features/>}/>
+        <Route path="/compare" element={<Compare />} />
       </Routes>
       <Footer />
     </Router>
