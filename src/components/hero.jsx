@@ -10,10 +10,6 @@ const phoneAnim = {
   hidden: { scale: 0.92, opacity: 0 },
   visible: { scale: 1, opacity: 1, transition: { delay: 0.35, duration: 0.9, type: "spring", bounce: 0.32 } },
 };
-const chartAnim = {
-  hidden: { pathLength: 0 },
-  visible: { pathLength: 1, transition: { delay: 1, duration: 1, ease: "easeInOut" } },
-};
 
 function Hero() {
   return (
@@ -29,9 +25,7 @@ function Hero() {
           variants={phoneAnim}
           initial="hidden"
           animate="visible"
-        >
-       
-        </motion.div>
+        ></motion.div>
         <motion.div
           className="hero-text"
           custom={1}
@@ -53,7 +47,6 @@ function Hero() {
           </motion.blockquote>
           <motion.div className="hero-btn-row" custom={4} variants={fade}>
             <a className="get-started-btn" href="/signup">Get Started</a>
-         
           </motion.div>
         </motion.div>
       </div>
