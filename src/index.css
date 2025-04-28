@@ -31,13 +31,13 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: #222;
-  font-family: inherit;
+/*   font-family: inherit; */
   font-weight: 800;
   letter-spacing: .01em;
   margin-bottom: 0.4em;
 }
 button, input, select, textarea {
-  font-family: inherit;
+/*   font-family: inherit; */
 }
 ::selection {
   background: #a385ed;
