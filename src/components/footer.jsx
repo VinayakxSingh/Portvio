@@ -12,11 +12,8 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* Brand and Social Links */}
         <div className="footer-brand">
-          <div className="brand-logo" style={{ color: "black" }}>
-            Portvio
-          </div>
+          <div className="brand-logo">Portvio</div>
           <p className="brand-tagline">
             Smart investment tracking for informed decisions
           </p>
@@ -36,16 +33,11 @@ function Footer() {
           </div>
         </div>
 
-        {/* Company Links */}
         <div className="footer-links">
           <h4>Company</h4>
           <ul>
-            <li>
-              <Link to="/about-us">About Us</Link>
-            </li>
-            <li>
-              <Link to="/contactus">Contact</Link>
-            </li>
+            <li><Link to="/about-us">About Us</Link></li>
+            <li><Link to="/contactus">Contact</Link></li>
           </ul>
         </div>
       </div>
