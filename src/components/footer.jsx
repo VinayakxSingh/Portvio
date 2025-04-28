@@ -12,16 +12,16 @@ function Footer() {
           <p className="brand-tagline">Smart investment tracking for informed decisions</p>
           <div className="social-links">
             <a href="#" className="social-link" aria-label="Twitter">
-{/*               <Twitter size={18} /> */}<i class="bi bi-twitter-x"></i>
+{/*               <Twitter size={18} /> */}<img src=",/assets/twitter-x.svg" alt="" />
             </a>
             <a href="#" className="social-link" aria-label="Facebook">
-{/*               <Facebook size={18} /> */}<i class="bi bi-facebook"></i>
+{/*               <Facebook size={18} /> */}<img src="./assets/facebook.svg" alt="" />
             </a>
             <a href="#" className="social-link" aria-label="LinkedIn">
-{/*               <Linkedin size={18} /> */}<i class="bi bi-linkedin"></i>
+{/*               <Linkedin size={18} /> */}<img src="./assets/linkedin.svg" alt="" />
             </a>
             <a href="https://github.com/" className="social-link" aria-label="GitHub">
-{/*               <Github size={18} /> */}<i class="bi bi-github"></i>
+{/*               <Github size={18} /> */}<img src="./assets/github.svg" alt="" />
             </a>
           </div>
         </div>
