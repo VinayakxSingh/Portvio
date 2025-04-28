@@ -2,10 +2,10 @@ import React from "react";
 import "./Footer.css";
 
 // Import images
-import twitterIcon from "./assets/twitter-x.svg";
-import facebookIcon from "./assets/facebook.svg";
-import linkedinIcon from "./assets/linkedin.svg";
-import githubIcon from "./assets/github.svg";
+import twitterIcon from "../assets/twitter-x.svg";
+import facebookIcon from "../assets/facebook.svg";
+import linkedinIcon from "../assets/linkedin.svg";
+import githubIcon from "../assets/github.svg";
 
 function Footer() {
   return (
