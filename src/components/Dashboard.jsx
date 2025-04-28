@@ -172,6 +172,12 @@ const Dashboard = () => {
         >
           Add Investments
         </button>
+        <button 
+            className="compare-button"
+            onClick={() => navigate("/compare", { state: { userId: userData.userId } })}
+          >
+            Compare
+          </button>
       </div>
 
       <div className="dashboard-content">
