@@ -78,219 +78,115 @@ const Compare = () => {
     }
   };
 
-  const containerStyle = {
-    fontFamily: "'Poppins', Arial, sans-serif", 
-    padding: '30px',
-    textAlign: 'center',
-    maxWidth: '1200px',
-    margin: '0 auto',
-    backgroundColor: '#f8fafc',
-    borderRadius: '16px',
-    boxShadow: '0 0 20px rgba(0, 0, 0, 0.05)',
-  };
-
-  const headingStyle = {
-    fontSize: '2.75rem',
-    fontWeight: '700',
-    color: '#1e293b',
-    marginBottom: '40px',
-    textAlign: 'center',
-    position: 'relative',
-    paddingBottom: '15px',
-  };
-
-  const selectContainerStyle = {
-    marginBottom: '30px',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  };
-
-  const labelStyle = {
-    fontSize: '1.25rem',
-    fontWeight: '600',
-    marginBottom: '12px',
-    color: '#334155',
-    alignSelf: 'flex-start',
-    marginLeft: '10%',
-  };
-
-  const selectStyle = {
-    fontSize: '1.1rem',
-    padding: '14px',
-    width: '80%',
-    maxWidth: '500px',
-    borderRadius: '10px',
-    border: '2px solid #cbd5e1',
-    outline: 'none',
-    color: '#334155',
-    backgroundColor: 'white',
-    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)',
-    transition: 'all 0.3s ease',
-    cursor: 'pointer',
-    minHeight: '120px',
-  };
-
-  const optionStyle = {
-    padding: '8px',
-    margin: '4px 0',
-  };
-
-  const buttonStyle = {
-    fontSize: '1.25rem',
-    padding: '14px 30px',
-    backgroundColor: '#10b981',
-    color: 'white',
-    cursor: 'pointer',
-    border: 'none',
-    borderRadius: '10px',
-    marginBottom: '40px',
-    boxShadow: '0 4px 12px rgba(16, 185, 129, 0.3)',
-    transition: 'all 0.3s ease',
-    fontWeight: '600',
-  };
-
-  const buttonHoverStyle = {
-    backgroundColor: '#0d9669',
-    transform: 'translateY(-2px)',
-    boxShadow: '0 6px 14px rgba(16, 185, 129, 0.4)',
-  };
-
-  const errorStyle = {
-    color: '#ef4444',
-    fontSize: '1.1rem',
-    fontWeight: '500',
-    marginBottom: '20px',
-    padding: '10px 16px',
-    backgroundColor: 'rgba(239, 68, 68, 0.1)',
-    borderRadius: '8px',
-    borderLeft: '4px solid #ef4444',
-    display: error ? 'block' : 'none',
-    width: '80%',
-    maxWidth: '500px',
-    margin: '0 auto 20px auto',
-    textAlign: 'left',
-  };
-
-  const chartContainerStyle = {
-    display: 'flex',
-    gap: '30px',
-    justifyContent: 'center',
-    marginBottom: '40px',
-    flexWrap: 'wrap',
-  };
-
-  const singleChartStyle = {
-    width: '45%',
-    minWidth: '300px',
-    backgroundColor: 'white',
-    padding: '20px',
-    borderRadius: '12px',
-    boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
-  };
-
-  const comparisonContainerStyle = {
-    display: 'flex',
-    gap: '30px',
-    justifyContent: 'center',
-    marginTop: '40px',
-    flexWrap: 'wrap',
-  };
-
-  const investmentCardStyle = {
-    backgroundColor: 'white',
-    padding: '30px',
-    borderRadius: '14px',
-    width: '45%',
-    minWidth: '300px',
-    textAlign: 'left',
-    boxShadow: '0 8px 16px rgba(0, 0, 0, 0.08)',
-    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-  };
-
-  const investmentCardHoverStyle = {
-    transform: 'translateY(-5px)',
-    boxShadow: '0 12px 24px rgba(0, 0, 0, 0.12)',
-  };
-
-  const investmentTitleStyle = {
-    fontSize: '1.8rem',
-    marginBottom: '25px',
-    textAlign: 'center',
-    borderBottom: '2px solid #e2e8f0',
-    paddingBottom: '15px',
-    color: '#1e293b',
-    fontWeight: '700',
-  };
-
-  const dataRowStyle = {
-    display: 'grid',
-    gridTemplateColumns: '1fr 1fr',
-    gap: '15px',
-    margin: '12px 0',
-    alignItems: 'center',
-    padding: '8px 0',
-  };
-
-  const dataLabelStyle = {
-    fontWeight: '600',
-    margin: '0',
-    color: '#475569',
-    fontSize: '1.1rem',
-  };
-
-  const dataValueStyle = {
-    textAlign: 'right',
-    margin: '0',
-    fontSize: '1.25rem',
-    fontWeight: '500',
-    color: '#334155',
-  };
-
   const [isButtonHovered, setIsButtonHovered] = useState(false);
-  const [hoveredCard, setHoveredCard] = useState(null);
 
   return (
-    <div style={containerStyle}>
-      <h2 style={headingStyle}>Compare Investments</h2>
+    <div style={{ 
+      fontFamily: "'Poppins', Arial, sans-serif", 
+      padding: '20px', 
+      textAlign: 'center',
+      maxWidth: '1200px',
+      margin: '0 auto'
+    }}>
+      <h2 style={{ 
+        fontSize: '2.5rem', 
+        fontWeight: '700', 
+        color: '#1e293b', 
+        marginBottom: '30px' 
+      }}>
+        Compare Investments
+      </h2>
 
-      <div style={selectContainerStyle}>
-        <label htmlFor="investments" style={labelStyle}>Select Investments (max 2):</label>
+      <div style={{ marginBottom: '20px' }}>
+        <label 
+          htmlFor="investments" 
+          style={{ 
+            fontSize: '1.2rem', 
+            fontWeight: '500', 
+            marginRight: '10px',
+            color: '#334155'
+          }}
+        >
+          Select Investments (max 2):
+        </label>
         <select
           id="investments"
           multiple
           value={selectedInvestments}
           onChange={handleSelectionChange}
-          style={selectStyle}
+          style={{
+            fontSize: '1rem',
+            padding: '10px',
+            width: '300px',
+            marginBottom: '10px',
+            borderRadius: '8px',
+            border: '2px solid #ddd',
+            outline: 'none',
+            color: '#333',
+            transition: 'border-color 0.3s ease',
+            boxShadow: '0 2px 5px rgba(0, 0, 0, 0.05)',
+          }}
         >
           {investments.map((investment) => (
             <option 
               key={`${investment.name}-${investment.purchaseDate}`} 
               value={`${investment.name}-${investment.purchaseDate}`}
-              style={optionStyle}
             >
               {investment.name} - {new Date(investment.purchaseDate).toLocaleDateString()}
             </option>
           ))}
         </select>
       </div>
-
-      <div style={errorStyle}>{error}</div>
+      
+      {error && (
+        <div style={{
+          color: '#ef4444',
+          fontSize: '0.95rem',
+          fontWeight: '500',
+          marginBottom: '15px',
+          padding: '8px 12px',
+          backgroundColor: 'rgba(239, 68, 68, 0.1)',
+          borderRadius: '6px',
+          borderLeft: '3px solid #ef4444',
+          textAlign: 'left',
+          maxWidth: '300px',
+          margin: '0 auto 15px auto'
+        }}>
+          {error}
+        </div>
+      )}
 
       <button
         onClick={handleSubmit}
-        style={{...buttonStyle, ...(isButtonHovered ? buttonHoverStyle : {})}}
+        style={{
+          fontSize: '1.2rem',
+          padding: '12px 25px',
+          backgroundColor: isButtonHovered ? '#3b8f3e' : '#45A049',
+          color: 'white',
+          cursor: 'pointer',
+          border: 'none',
+          borderRadius: '8px',
+          marginBottom: '40px',
+          boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+          transition: 'background-color 0.3s ease',
+          fontWeight: '600'
+        }}
         onMouseEnter={() => setIsButtonHovered(true)}
         onMouseLeave={() => setIsButtonHovered(false)}
       >
-        Compare Investments
+        Submit
       </button>
 
       {chartData && (
         <div>
-          <div style={chartContainerStyle}>
+          <div style={{ 
+            display: 'flex', 
+            gap: '30px', 
+            justifyContent: 'center', 
+            marginBottom: '40px'
+          }}>
             {chartData.datasets.map((dataset, index) => (
-              <div key={index} style={singleChartStyle}>
+              <div key={index} style={{ width: '45%' }}>
                 <Line 
                   data={{ 
                     labels: ["Purchase Price", "Current Value"], 
@@ -327,12 +223,17 @@ const Compare = () => {
             ))}
           </div>
 
-          <div style={comparisonContainerStyle}>
+          <div style={{ 
+            display: 'flex', 
+            gap: '30px', 
+            justifyContent: 'center', 
+            marginTop: '40px' 
+          }}>
             {investments
               .filter((investment) =>
                 selectedInvestments.includes(`${investment.name}-${investment.purchaseDate}`)
               )
-              .map((investment, index) => {
+              .map((investment) => {
                 const percentageChange = calculatePercentageChange(
                   investment.currentValue,
                   investment.purchasePrice
@@ -340,41 +241,72 @@ const Compare = () => {
                 const isPositive = parseFloat(percentageChange) >= 0;
 
                 return (
-                  <div 
-                    key={`${investment.name}-${investment.purchaseDate}`} 
-                    style={{
-                      ...investmentCardStyle, 
-                      ...(hoveredCard === index ? investmentCardHoverStyle : {})
-                    }}
-                    onMouseEnter={() => setHoveredCard(index)}
-                    onMouseLeave={() => setHoveredCard(null)}
-                  >
-                    <h3 style={investmentTitleStyle}>{investment.name}</h3>
-                    <div style={{...dataRowStyle, borderBottom: '1px solid #f1f5f9'}}>
-                      <p style={dataLabelStyle}>Purchase Date:</p>
-                      <p style={dataValueStyle}>{new Date(investment.purchaseDate).toLocaleDateString()}</p>
+                  <div key={`${investment.name}-${investment.purchaseDate}`} style={{
+                    backgroundColor: '#f9f9f9',
+                    padding: '30px',
+                    borderRadius: '12px',
+                    width: '45%',
+                    textAlign: 'left',
+                    boxShadow: '0 6px 12px rgba(0, 0, 0, 0.1)',
+                    transition: 'transform 0.3s ease',
+                  }}>
+                    <h3 style={{
+                      fontSize: '1.8rem',
+                      marginBottom: '20px',
+                      textAlign: 'center',
+                      borderBottom: '2px solid #ddd',
+                      paddingBottom: '15px',
+                      color: '#333',
+                      fontWeight: '600'
+                    }}>{investment.name}</h3>
+                    <div style={{
+                      display: 'grid',
+                      gridTemplateColumns: '1fr 1fr',
+                      gap: '15px',
+                      margin: '10px 0',
+                      alignItems: 'center',
+                    }}>
+                      <p style={{ fontWeight: 'bold', margin: '0', color: '#4a5568' }}>Purchase Price:</p>
+                      <p style={{ 
+                        textAlign: 'right', 
+                        margin: '0', 
+                        fontSize: '1.2rem',
+                        color: '#2d3748',
+                        fontWeight: '500'  
+                      }}>${investment.purchasePrice.toLocaleString()}</p>
                     </div>
-                    <div style={{...dataRowStyle, borderBottom: '1px solid #f1f5f9'}}>
-                      <p style={dataLabelStyle}>Purchase Price:</p>
-                      <p style={dataValueStyle}>${investment.purchasePrice.toLocaleString()}</p>
+                    <div style={{
+                      display: 'grid',
+                      gridTemplateColumns: '1fr 1fr',
+                      gap: '15px',
+                      margin: '10px 0',
+                      alignItems: 'center',
+                    }}>
+                      <p style={{ fontWeight: 'bold', margin: '0', color: '#4a5568' }}>Current Value:</p>
+                      <p style={{ 
+                        textAlign: 'right', 
+                        margin: '0', 
+                        fontSize: '1.2rem',
+                        color: '#2d3748',
+                        fontWeight: '500'  
+                      }}>${investment.currentValue.toLocaleString()}</p>
                     </div>
-                    <div style={{...dataRowStyle, borderBottom: '1px solid #f1f5f9'}}>
-                      <p style={dataLabelStyle}>Current Value:</p>
-                      <p style={dataValueStyle}>${investment.currentValue.toLocaleString()}</p>
-                    </div>
-                    <div style={dataRowStyle}>
-                      <p style={dataLabelStyle}>Performance:</p>
+                    <div style={{
+                      display: 'grid',
+                      gridTemplateColumns: '1fr 1fr',
+                      gap: '15px',
+                      margin: '10px 0',
+                      alignItems: 'center',
+                    }}>
+                      <p style={{ fontWeight: 'bold', margin: '0', color: '#4a5568' }}>Change:</p>
                       <p style={{
                         textAlign: 'right',
                         margin: '0',
-                        fontSize: '1.3rem',
-                        color: isPositive ? '#10b981' : '#ef4444',
-                        fontWeight: '700',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'flex-end',
+                        fontSize: '1.2rem',
+                        color: isPositive ? '#45A049' : '#f44336',
+                        fontWeight: 'bold'
                       }}>
-                        {isPositive ? '↑ ' : '↓ '}{isPositive ? '+' : ''}{percentageChange}%
+                        {isPositive ? '↑ +' : '↓ '}{percentageChange}%
                       </p>
                     </div>
                   </div>
