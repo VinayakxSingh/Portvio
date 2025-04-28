@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-
+ import { Link } from 'react-router-dom';
 // Import images
 import twitterIcon from "../assets/twitter-x.svg";
 import facebookIcon from "../assets/facebook.svg";
@@ -34,8 +34,11 @@ function Footer() {
           <div className="footer-section" style={{ position: "relative", left: "700px" }}>
             <h4>Company</h4>
             <ul>
-              <li><a href="/about-us">About Us</a></li>
-              <li><a href="/contactus">Contact</a></li>
+        
+
+<Link to="/about-us">About Us</Link>
+<Link to="/contactus">Contact</Link>
+
             </ul>
           </div>
         </div>
