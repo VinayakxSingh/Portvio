@@ -30,19 +30,19 @@ const Dashboard = () => {
       const bitcoinPrice = responses[0]?.data?.bitcoin?.usd || 0;
       const ethereumPrice = responses[1]?.data?.ethereum?.usd || 0;
 
-      const updatedInvestments = investments.map(inv => {
+      const updatedInvestments = investments.filter(Boolean).map(inv => {
         let currentPrice = 0;
-        if (inv.name.toLowerCase() === "bitcoin") {
+        if (inv.name?.toLowerCase() === "bitcoin") {
           currentPrice = bitcoinPrice;
-        } else if (inv.name.toLowerCase() === "ethereum") {
+        } else if (inv.name?.toLowerCase() === "ethereum") {
           currentPrice = ethereumPrice;
         } else {
-          currentPrice = inv.purchasePrice;
+          currentPrice = inv.purchasePrice || 0;
         }
 
         return {
           ...inv,
-          currentValue: currentPrice * inv.quantity,
+          currentValue: currentPrice * (inv.quantity || 0),
           lastUpdated: new Date().toLocaleString()
         };
       });
@@ -95,14 +95,15 @@ const Dashboard = () => {
           for (const key in users) {
             const user = users[key];
             if (user.userId === userId || key === userId) {
-              const userInvestments = Array.isArray(user.investments) ? user.investments : [];
+              const userInvestments = Array.isArray(user.investments) ? user.investments.filter(Boolean) : [];
+
               if (userInvestments.length > 0) {
                 let updatedInvestments = await updateCurrentValues(userInvestments);
 
                 setInvestments(updatedInvestments);
 
-                const investmentTotal = updatedInvestments.reduce((acc, inv) => acc + (inv.purchasePrice * inv.quantity), 0);
-                const currentValueTotal = updatedInvestments.reduce((acc, inv) => acc + inv.currentValue, 0);
+                const investmentTotal = updatedInvestments.reduce((acc, inv) => acc + ((inv.purchasePrice || 0) * (inv.quantity || 0)), 0);
+                const currentValueTotal = updatedInvestments.reduce((acc, inv) => acc + (inv.currentValue || 0), 0);
 
                 setTotalInvestment(investmentTotal);
                 setTotalCurrentValue(currentValueTotal);
@@ -132,7 +133,7 @@ const Dashboard = () => {
   }, [location, navigate]);
 
   const totalProfitLoss = totalCurrentValue - totalInvestment;
-  const profitLossPercentage = totalInvestment > 0 
+  const profitLossPercentage = totalInvestment > 0
     ? ((totalProfitLoss / totalInvestment) * 100).toFixed(2)
     : 0;
 
@@ -143,10 +144,9 @@ const Dashboard = () => {
     }).format(amount);
   };
 
-  const filteredInvestments = investments.filter(inv => {
-    if (!filterType) return true;
-    return inv.name.toLowerCase() === filterType.toLowerCase();
-  });
+  const filteredInvestments = investments.filter(inv => 
+    inv && (!filterType || inv.name?.toLowerCase() === filterType.toLowerCase())
+  );
 
   const sortedInvestments = [...filteredInvestments].sort((a, b) => {
     const returnA = (a.currentValue - (a.purchasePrice * a.quantity));
@@ -167,19 +167,17 @@ const Dashboard = () => {
         <h2>Investment Dashboard</h2>
         <button 
           className="add-investment-button"
-          style={{backgroundColor:"green"}}
+          style={{ backgroundColor: "green" }}
           onClick={() => navigate("/add-investment", { state: { userId: userData.userId } })}
         >
           Add Investments
         </button>
-        <button 
-            className="compare-button"
-         
+        <button
           className="compare-btn"
-            onClick={() => navigate("/compare", { state: { userId: userData.userId } })}
-          >
-            Compare
-          </button>
+          onClick={() => navigate("/compare", { state: { userId: userData.userId } })}
+        >
+          Compare
+        </button>
       </div>
 
       <div className="dashboard-content">
@@ -191,7 +189,7 @@ const Dashboard = () => {
           <div className="investments-section">
             <h2>Your Investments</h2>
 
-            {/* ----------- Charts Component Loaded Here ------------ */}
+            {/* Charts component */}
             <Charts investments={investments} totalInvestment={totalInvestment} />
 
             <div className="filter-sort-controls">
@@ -230,18 +228,18 @@ const Dashboard = () => {
                 </thead>
                 <tbody>
                   {sortedInvestments.map((investment, index) => {
-                    const initialInvestment = investment.purchasePrice * investment.quantity;
-                    const profitLoss = investment.currentValue - initialInvestment;
-                    const returnPercentage = ((profitLoss / initialInvestment) * 100).toFixed(2);
+                    const initialInvestment = (investment.purchasePrice || 0) * (investment.quantity || 0);
+                    const profitLoss = (investment.currentValue || 0) - initialInvestment;
+                    const returnPercentage = initialInvestment > 0 ? ((profitLoss / initialInvestment) * 100).toFixed(2) : "0.00";
 
                     return (
                       <tr key={investment.investmentId || index}>
                         <td>{investment.name}</td>
                         <td>{investment.purchaseDate}</td>
-                        <td>{formatCurrency(investment.purchasePrice)}</td>
-                        <td>{investment.quantity}</td>
+                        <td>{formatCurrency(investment.purchasePrice || 0)}</td>
+                        <td>{investment.quantity || 0}</td>
                         <td>{formatCurrency(initialInvestment)}</td>
-                        <td>{formatCurrency(investment.currentValue)}</td>
+                        <td>{formatCurrency(investment.currentValue || 0)}</td>
                         <td className={profitLoss >= 0 ? "profit" : "loss"}>
                           {formatCurrency(profitLoss)} ({returnPercentage}%)
                         </td>
