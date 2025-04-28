@@ -75,11 +75,11 @@ const Compare = () => {
   };
 
   return (
-    <div style={{ fontFamily: 'Arial, sans-serif', margin: '20px', textAlign: 'center' }}>
-      <h2 style={{ fontSize: '2rem', marginBottom: '20px' }}>Compare Investments</h2>
+    <div style={{ fontFamily: 'Arial, sans-serif', padding: '20px', textAlign: 'center' }}>
+      <h2 style={{ fontSize: '2.5rem', fontWeight: '700', color: '#333', marginBottom: '30px' }}>Compare Investments</h2>
 
-      <div>
-        <label htmlFor="investments" style={{ fontSize: '1rem', marginRight: '10px' }}>Select Investments (max 2):</label>
+      <div style={{ marginBottom: '20px' }}>
+        <label htmlFor="investments" style={{ fontSize: '1.2rem', fontWeight: '500', marginRight: '10px' }}>Select Investments (max 2):</label>
         <select
           id="investments"
           multiple
@@ -87,11 +87,14 @@ const Compare = () => {
           onChange={handleSelectionChange}
           style={{
             fontSize: '1rem',
-            padding: '8px',
-            width: '250px',
-            marginBottom: '20px',
-            borderRadius: '5px',
-            border: '1px solid #ccc'
+            padding: '10px',
+            width: '300px',
+            marginBottom: '30px',
+            borderRadius: '8px',
+            border: '2px solid #ddd',
+            outline: 'none',
+            color: '#333',
+            transition: 'border-color 0.3s ease',
           }}
         >
           {investments.map((investment) => (
@@ -105,14 +108,16 @@ const Compare = () => {
       <button
         onClick={handleSubmit}
         style={{
-          fontSize: '1rem',
-          padding: '10px 20px',
-          border: 'none',
+          fontSize: '1.2rem',
+          padding: '12px 25px',
           backgroundColor: '#45A049',
           color: 'white',
           cursor: 'pointer',
-          borderRadius: '5px',
-          marginBottom: '30px'
+          border: 'none',
+          borderRadius: '8px',
+          marginBottom: '40px',
+          boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+          transition: 'background-color 0.3s ease',
         }}
       >
         Submit
@@ -120,7 +125,7 @@ const Compare = () => {
 
       {chartData && (
         <div>
-          <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', marginBottom: '20px' }}>
+          <div style={{ display: 'flex', gap: '30px', justifyContent: 'center', marginBottom: '40px' }}>
             {chartData.datasets.map((dataset, index) => (
               <div key={index} style={{ width: '45%' }}>
                 <Line data={{ labels: chartData.labels, datasets: [dataset] }} />
@@ -128,7 +133,7 @@ const Compare = () => {
             ))}
           </div>
 
-          <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', marginTop: '20px' }}>
+          <div style={{ display: 'flex', gap: '30px', justifyContent: 'center', marginTop: '40px' }}>
             {investments
               .filter((investment) =>
                 selectedInvestments.includes(`${investment.name}-${investment.purchaseDate}`)
@@ -141,19 +146,58 @@ const Compare = () => {
                 const isPositive = parseFloat(percentageChange) >= 0;
 
                 return (
-                  <div key={`${investment.name}-${investment.purchaseDate}`} style={{ backgroundColor: '#f4f4f4', padding: '20px', borderRadius: '8px', width: '45%', textAlign: 'left', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }}>
-                    <h3 style={{ fontSize: '1.5rem', marginBottom: '20px', textAlign: 'center', borderBottom: '1px solid #ddd', paddingBottom: '10px' }}>{investment.name}</h3>
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', margin: '10px 0', gap: '10px', alignItems: 'center' }}>
+                  <div key={`${investment.name}-${investment.purchaseDate}`} style={{
+                    backgroundColor: '#f9f9f9',
+                    padding: '30px',
+                    borderRadius: '12px',
+                    width: '45%',
+                    textAlign: 'left',
+                    boxShadow: '0 6px 12px rgba(0, 0, 0, 0.1)',
+                    transition: 'transform 0.3s ease',
+                  }}>
+                    <h3 style={{
+                      fontSize: '1.8rem',
+                      marginBottom: '20px',
+                      textAlign: 'center',
+                      borderBottom: '2px solid #ddd',
+                      paddingBottom: '15px',
+                      color: '#333'
+                    }}>{investment.name}</h3>
+                    <div style={{
+                      display: 'grid',
+                      gridTemplateColumns: '1fr 1fr',
+                      gap: '15px',
+                      margin: '10px 0',
+                      alignItems: 'center',
+                    }}>
                       <p style={{ fontWeight: 'bold', margin: '0' }}>Purchase Price:</p>
-                      <p style={{ textAlign: 'right', margin: '0', fontSize: '1.1rem' }}>${investment.purchasePrice}</p>
+                      <p style={{ textAlign: 'right', margin: '0', fontSize: '1.2rem' }}>${investment.purchasePrice}</p>
                     </div>
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', margin: '10px 0', gap: '10px', alignItems: 'center' }}>
+                    <div style={{
+                      display: 'grid',
+                      gridTemplateColumns: '1fr 1fr',
+                      gap: '15px',
+                      margin: '10px 0',
+                      alignItems: 'center',
+                    }}>
                       <p style={{ fontWeight: 'bold', margin: '0' }}>Current Value:</p>
-                      <p style={{ textAlign: 'right', margin: '0', fontSize: '1.1rem' }}>${investment.currentValue}</p>
+                      <p style={{ textAlign: 'right', margin: '0', fontSize: '1.2rem' }}>${investment.currentValue}</p>
                     </div>
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', margin: '10px 0', gap: '10px', alignItems: 'center' }}>
+                    <div style={{
+                      display: 'grid',
+                      gridTemplateColumns: '1fr 1fr',
+                      gap: '15px',
+                      margin: '10px 0',
+                      alignItems: 'center',
+                    }}>
                       <p style={{ fontWeight: 'bold', margin: '0' }}>Change:</p>
-                      <p style={{ textAlign: 'right', margin: '0', fontSize: '1.1rem', color: isPositive ? '#45A049' : '#f44336', fontWeight: 'bold' }}>
+                      <p style={{
+                        textAlign: 'right',
+                        margin: '0',
+                        fontSize: '1.2rem',
+                        color: isPositive ? '#45A049' : '#f44336',
+                        fontWeight: 'bold'
+                      }}>
                         {isPositive ? '+' : ''}{percentageChange}%
                       </p>
                     </div>
