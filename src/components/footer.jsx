@@ -12,7 +12,7 @@ function Footer() {
           <p className="brand-tagline">Smart investment tracking for informed decisions</p>
           <div className="social-links">
             <a href="#" className="social-link" aria-label="Twitter">
-{/*               <Twitter size={18} /> */}<img src=",/assets/twitter-x.svg" alt="" />
+{/*               <Twitter size={18} /> */}<img src="./assets/twitter-x.svg" alt="" />
             </a>
             <a href="#" className="social-link" aria-label="Facebook">
 {/*               <Facebook size={18} /> */}<img src="./assets/facebook.svg" alt="" />
