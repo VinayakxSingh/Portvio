@@ -1,4 +1,4 @@
-import "./features.css";
+import "./Features.css";
 import { motion } from "framer-motion";
 console.log(motion);
 const features = [
