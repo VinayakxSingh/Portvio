@@ -23,8 +23,8 @@ const Dashboard = () => {
   const updateCurrentValues = async (investments) => {
     try {
       const responses = await Promise.all([
-        axios.get("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd"),
-        axios.get("https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd")
+        axios.get(`${import.meta.env.VITE_COINGECKO_API_URL}?ids=bitcoin&vs_currencies=usd`),
+        axios.get(`${import.meta.env.VITE_COINGECKO_API_URL}?ids=ethereum&vs_currencies=usd`)
       ]);
 
       const bitcoinPrice = responses[0]?.data?.bitcoin?.usd || 0;

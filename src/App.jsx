@@ -12,10 +12,12 @@ import Dashboard from "./components/Dashboard";
 import AddInvestment from "./components/AddInvestment";
 import ContactUs from "./pages/contact";
 import Compare from './components/Compare';
+import ScrollToTop from './components/ScrollToTop';
 function App() {
   return (
     <Router>
       <Navbar />
+      <ScrollToTop />
       <Routes>
         <Route
           path="/"
