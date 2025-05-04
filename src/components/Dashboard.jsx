@@ -109,7 +109,7 @@ const Dashboard = () => {
                 setTotalCurrentValue(currentValueTotal);
 
                 await axios.patch(
-                  `https://investment-6f46c-default-rtdb.firebaseio.com/users/${key}.json`,
+                  `${import.meta.env.VITE_FIREBASE_DATABASE_URL}/users/${key}.json`,
                   { investments: updatedInvestments }
                 );
               } else {

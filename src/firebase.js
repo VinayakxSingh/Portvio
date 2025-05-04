@@ -4,9 +4,9 @@ import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth"; // ✅ Required for auth
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAy2ODePtFm89XOvaB1bpc6GQywtfJC15M",
-  authDomain: "investment-6f46c.firebaseapp.com",
-  databaseURL: "https://investment-6f46c-default-rtdb.firebaseio.com",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
   projectId: "investment-6f46c",
   storageBucket: "investment-6f46c.appspot.com", // ❗ corrected `.app` to `.com`
   messagingSenderId: "361761218036",

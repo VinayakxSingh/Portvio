@@ -19,7 +19,7 @@ const Login = () => {
     try {
       // Get all users from the Firebase database
       const response = await axios.get(
-        "https://investment-6f46c-default-rtdb.firebaseio.com/users.json"
+        `${import.meta.env.VITE_FIREBASE_DATABASE_URL}/users.json`
       );
 
       if (response.data) {

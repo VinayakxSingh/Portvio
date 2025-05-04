@@ -29,7 +29,7 @@ const Signup = () => {
     try {
       // Make API call to Firebase
       const response = await axios.post(
-        'https://investment-6f46c-default-rtdb.firebaseio.com/users.json',
+        `${import.meta.env.VITE_FIREBASE_DATABASE_URL}/users.json`,
         formData
       );
       
